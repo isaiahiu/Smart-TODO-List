@@ -1,12 +1,15 @@
 const express = require("express");
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  return res.render("index");
-  // queryhere.then((tasks) => {
-  //   // res.render, res.send, res.redirect
+router.use((req, res, next) => {
+  if (!req.session.user_id) {
+    res.redirect("/login");
+  }
+  next();
+});
 
-  // });
+router.get("/", (req, res) => {
+  return res.render("index"); //pass in user object here with tasks
 });
 
 module.exports = router;
