@@ -14,7 +14,7 @@ router.get("/", (req, res) => {
 
 router.post("/", (req, res) => {
   const { username, email, password } = req.body;
-  //function here to create new user with vars above
+  //function here to create new user with vars above, returns object
   req.session.user_id = data.id; // assign cookie
   res.redirect("/");
 });
