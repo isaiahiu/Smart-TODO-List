@@ -37,20 +37,17 @@ app.use(
 
 // Separated Routes for each Resource
 // Note: Feel free to replace the example routes below with your own
-const usersRoutes = require("./routes/users");
-const widgetsRoutes = require("./routes/widgets");
 const indexRoutes = require("./routes/index");
-const loginRoutes = require("./routes/login");
+const entryRoutes = require("./routes/entry");
 const logoutRoutes = require("./routes/logout");
-const registerRoutes = require("./routes/register");
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
 // app.use("/api/users", usersRoutes(db));
 // app.use("/api/widgets", widgetsRoutes(db));
 app.all("/", indexRoutes);
-app.use("/login", loginRoutes);
+app.use("/entry", entryRoutes);
 app.use("/logout", logoutRoutes);
-app.use("register", registerRoutes);
+
 
 // Note: mount other resources here, using the same pattern above
 
