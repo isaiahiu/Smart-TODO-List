@@ -1,7 +1,6 @@
 # Routes
 
-GET /
+GET / query tasks
 GET /login
 GET/POST /register
-GET /tasks
 POST /:taskID
