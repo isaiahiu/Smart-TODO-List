@@ -39,12 +39,12 @@ const userTasks = function (userid) {
 };
 
 //Add new Task to the datbase
-const addNewTask = function (userid, name, category) {
+const addNewTask = function (userid, name, category_id) {
   const query = `
-    INSERT INTO tasks (user_id, category_id, name, priority)
-    VALUES ($1, $2, $3, $4)
+    INSERT INTO tasks (user_id, name, category_id)
+    VALUES ($1, $2, $3)
     RETURNING*`;
-  const values = [userid, name, category];
+  const values = [userid, name, category_id];
   return db
     .query(query, values)
     .then((res) => res.rows[0])

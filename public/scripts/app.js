@@ -1,4 +1,4 @@
-// Client facing scripts here
+// // Client facing scripts here
 // $(() => {
 //   $(".form-login").submit((event) => {
 //     // event.preventDefault();
@@ -11,8 +11,11 @@
 //     });
 //   });
 
-  // $(".add-task-form").submit((event) => {
-  //   event.preventDefault();
-  //   let $task = $("");
-  // });
+//   $(".add-task-form").submit((event) => {
+//     event.preventDefault();
+
+//     $.post('/home/tasks', {}).then((result) => {
+//       $('.movie-list').prepend(result)
+//     })
+//   });
 // });

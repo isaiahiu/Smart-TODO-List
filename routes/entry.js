@@ -18,24 +18,25 @@ router.post("/login", (req, res) => {
   console.log(req.body);
   userLogin(email, password)
     .then((result) => {
+      console.log("result: ", result);
       req.session.user_id = result.id; // assign session cookie to user's id
-      return res.JSON(result);
+      return res.json(result);
     })
-    .then((result) => {
-      const tasks = userTasks(result.id);
-      return res.JSON({ result, tasks });
-    })
+    // .then((result) => {
+    //   const tasks = userTasks(result.id);
+    //   return res.json({ result, tasks });
+    // })
     .catch((err) => {
       return res.status(403).send(err);
     });
-  res.send("hello again");
+  // res.send("hello again");
 });
 
-router.post("/register", (req, res) => {
-  addUser(req.body).then((result) => {
-    req.session.user_id = result.id; // assign cookie
-    return res.JSON(result);
-  });
-});
+// router.post("/register", (req, res) => {
+//   addUser(req.body).then((result) => {
+//     req.session.user_id = result.id; // assign cookie
+//     return res.JSON(result);
+//   });
+// });
 
 module.exports = router;
