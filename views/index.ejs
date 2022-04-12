@@ -15,8 +15,9 @@
   
 </head>
 
+<!-- Nav Bar -->
 <nav class="navbar navbar-default">
-  <div class="container">
+  <div class="nav-container">
     <div class="navbar-header">
       <p class="navbar-brand"></p>
     </div>
@@ -29,86 +30,73 @@
 </nav>
 
 
-<!-- Register-->
 
 
+<!-- Sign In and Submit-->
 
 <body>
-<main>
-
-  <form>
-  
-    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-
-    <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-      <label for="floatingInput">Email address</label>
+  <main>
+    <form action="/login" method="POST" class="form-login">
+      <h1>Please sign in</h1>
+    <div class="form-email">
+      <input type="email" class="email-input" placeholder="name@example.com">
+      <label for="email-input">Email address</label>
     </div>
-    <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-      <label for="floatingPassword">Password</label>
+    <div class="form-password">
+      <input type="password" class="password-input" placeholder="Password">
+      <label for="password-input">Password</label>
     </div>
 
-    <div class="checkbox mb-3">
+    <div class="remember-me">
       <label>
         <input type="checkbox" value="remember-me"> Remember me
       </label>
     </div>
-    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+    <button class="sign-in" type="submit">Sign in</button>
     <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
   </form>
 
-
-
-
+  <!-- Add a Task/Category -->
 
   <div>
-  <form action="/index" , method="post">
-    <div class="form-group">
-      <label class = "text-danger">Task</label>
-      <input type="text" name="addTask" class="form-control" />
+  <form action="/index", method="POST" class="add-task-form">
+    <div class="add-category">
+      <label class = "task-label">Task</label>
+      <input type="text" name="addTask" class="add-task-text" />
     </div>
-    <button name="button" type="submit" class="btn btn-primary">Add to category</button>
+    <button name="button" type="submit" class="add-task-button">Add to category</button>
   </form>
 </div>
 
-
+<!-- Tasks Sorted by Category-->
 
 <!-- For Categories:-->
-<section class ="container-category">
-  <div style="border:2px solid black;margin:12px" class ='cat-1-wrapper'>
-    <div class = 'cat-1'>
-    <img src>
-    <h1>Category: Watch</h1>
-    <div class ="todo">Where tasks will be added with jquery</div>
-  </div>
-  </div>
-
-  <div style="border:2px solid black;margin:12px" class ='cat-2-wrapper'>
-    <div class = 'cat-2'>
-    <img src>
-    <h1>Category: Eat</h1>
-    <div class ="todo">Where tasks will be added with jquery</div>
-  </div>
+<section class ="category-containers">
+  <div style="border:2px solid black;margin:12px" class ='movie-box'>
+    <div class = 'movie-text'>
+    <img class = 'movie-img' src="" alt="placeholder">
+    <h1 class="h1-boxes">Category: Watch</h1>
+    <ul class="movie-list">
+    </ul>
   </div>
 
-  <div style="border:2px solid black;margin:12px" class ='cat-3-wrapper'>
-    <div class = 'cat-3'>
-    <img src>
-    <h1>Category: Shop</h1>
-    <div class ="todo">Where tasks will be added with jquery</div>
-  </div>
+  <div style="border:2px solid black;margin:12px" class ='eat-box'>
+    <div class = 'eat-text'>
+    <img class = 'eat-img' src="" alt="placerholder">
+    <h1 class="h1-boxes">Category: Eat</h1>
   </div>
 
-  <div style="border:2px solid black;margin:12px" class ='cat-4-wrapper'>
-    <div class = 'cat-4'>
-    <img src>
-    <h1>Category: Read</h1>
-    <div class ="todo">Where tasks will be added with jquery</div>
-  </div>
+  <div style="border:2px solid black;margin:12px" class ='book-box'>
+    <div class = 'book-text'>
+    <img class = 'book-img' src="" alt="placeholder">
+    <h1 class="h1-boxes">Category: Read</h1>
   </div>
 
-
+  <div style="border:2px solid black;margin:12px" class ='product-box'>
+    <div class = 'product-text'>
+    <img class = 'product-img' src="" alt="placeholder">
+    <h1 class="h1-boxes">Category: Shop</h1>
+    </div>
 </section>
 </main>
 
