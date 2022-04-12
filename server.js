@@ -44,10 +44,9 @@ const logoutRoutes = require("./routes/logout");
 // Note: Feel free to replace the example routes below with your own
 // app.use("/api/users", usersRoutes(db));
 // app.use("/api/widgets", widgetsRoutes(db));
-app.all("/", indexRoutes);
+app.use("/home", indexRoutes);
 app.use("/entry", entryRoutes);
 app.use("/logout", logoutRoutes);
-
 
 // Note: mount other resources here, using the same pattern above
 
@@ -55,9 +54,9 @@ app.use("/logout", logoutRoutes);
 // Warning: avoid creating more routes in this file!
 // Separate them into separate routes files (see above).
 
-// app.get("/", (req, res) => {
-//   res.render("index");
-// });
+app.get("/", (req, res) => {
+  res.redirect("/home");
+});
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);

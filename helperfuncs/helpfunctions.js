@@ -1,7 +1,7 @@
 const db = require('./db');
 
 //adding a new user to the database
-const addUser = function(user, db) {
+const addUser = function(user) {
     let query = `
     INSERT INTO users (username, email, password)
     VALUES ($1, $2, $3, $4)
@@ -13,18 +13,18 @@ const addUser = function(user, db) {
 }
 
 //User Login
-const userLogin = function(email,password,db) {
+const userLogin = function(email,password) {
     const query = `
     SELECT * FROM users WHERE email = $1 AND password = $2`;
     const value = [email, password]
     return db.query(query, value)
-    .then(res => res.rows)
+    .then(res => res.rows[0])
     .catch(err => console.log(err.message))
 }
 
 
 //see all tasks for a user:
-const userTasks = function(userid, db) {
+const userTasks = function(userid) {
     const query = `
     SELECT * FROM tasks
     WHERE tasks.user_id = $1
@@ -37,7 +37,7 @@ const userTasks = function(userid, db) {
 }
 
 //Add new Task to the datbase
-const addNewTask = function(userid, name, category, db) {
+const addNewTask = function(userid, name, category) {
     const query = `
     INSERT INTO tasks (user_id, category_id, name, priority)
     VALUES ($1, $2, $3, $4)
@@ -49,7 +49,7 @@ const addNewTask = function(userid, name, category, db) {
 }
 
 //delete task from the database
-const deleteUserTask = function(userid, taskid, db) {
+const deleteUserTask = function(userid, taskid) {
     let query = `
     DELETE FROM tasks WHERE user_id = $1 AND id = $2`;
     const values = [userid, taskid];
