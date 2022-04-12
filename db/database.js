@@ -9,6 +9,8 @@ const db = new Pool({
   database: process.env.DB_NAME,
 });
 
-db.connect();
+db.connect(() => {
+  console.log("database connected");
+});
 
 module.exports = db;

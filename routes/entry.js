@@ -1,6 +1,6 @@
 const express = require("express");
+const userLogin = require("../helperfuncs/helpfunctions").userLogin;
 const router = express.Router();
-
 // router.use((req, res, next) => {
 //   if (req.session.user_id) {
 //     //if user already logged in redirect to homepage
@@ -16,19 +16,19 @@ router.get("/", (req, res) => {
 router.post("/login", (req, res) => {
   const { email, password } = req.body;
   console.log(req.body);
+  userLogin(email, password)
+    .then((result) => {
+      req.session.user_id = result.id; // assign session cookie to user's id
+      return res.JSON(result);
+    })
+    .then((result) => {
+      const tasks = userTasks(result.id);
+      return res.JSON({ result, tasks });
+    })
+    .catch((err) => {
+      return res.status(403).send(err);
+    });
   res.send("hello again");
-  // userLogin(email, password)
-  //   .then((result) => {
-  //     req.session.user_id = data.id; // assign session cookie to user's id
-  //     return res.JSON(result);
-  //   })
-  //   .then((result) => {
-  //     const tasks = userTasks(result.id);
-  //     return res.JSON({ result, tasks });
-  //   })
-  //   .catch((err) => {
-  //     return res.status(403).send(err);
-  //   });
 });
 
 router.post("/register", (req, res) => {
