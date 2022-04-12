@@ -36,14 +36,14 @@
 
 <body>
   <main>
-    <form action="/login" method="POST" class="form-login">
+    <form action="/entry/login" method="POST" class="form-login">
       <h1>Please sign in</h1>
     <div class="form-email">
-      <input type="email" class="email-input" placeholder="name@example.com">
+      <input type="email" class="email-input" placeholder="name@example.com" name="email">
       <label for="email-input">Email address</label>
     </div>
     <div class="form-password">
-      <input type="password" class="password-input" placeholder="Password">
+      <input type="password" class="password-input" placeholder="Password" name="password">
       <label for="password-input">Password</label>
     </div>
 
@@ -65,6 +65,17 @@
       <input type="text" name="addTask" class="add-task-text" />
     </div>
     <button name="button" type="submit" class="add-task-button">Add to category</button>
+    <label for="pet-select">Choose a Category:</label>
+
+<select name="category-dd" id="category">
+    <option value="">--Please choose an option--</option>
+    <option value="movie">Movie</option>
+    <option value="food">Food</option>
+    <option value="book">Book</option>
+    <option value="parrot">Product</option>
+
+</select>
+
   </form>
 </div>
 
@@ -74,31 +85,45 @@
 <section class ="category-containers">
   <div style="border:2px solid black;margin:12px" class ='movie-box'>
     <div class = 'movie-text'>
-    <img class = 'movie-img' src="" alt="placeholder">
     <h1 class="h1-boxes">Category: Watch</h1>
     <ul class="movie-list">
+      <li></li>
+      <li></li>
+      <li></li>
     </ul>
     </div>
   </div>
 
   <div style="border:2px solid black;margin:12px" class ='eat-box'>
     <div class = 'eat-text'>
-    <img class = 'eat-img' src="" alt="placerholder">
     <h1 class="h1-boxes">Category: Eat</h1>
+    <ul class="eat-list">
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
   </div>
   </div>
 
   <div style="border:2px solid black;margin:12px" class ='book-box'>
     <div class = 'book-text'>
-    <img class = 'book-img' src="" alt="placeholder">
     <h1 class="h1-boxes">Category: Read</h1>
+    <ul class="book-list">
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
   </div>
   </div>
 
   <div style="border:2px solid black;margin:12px" class ='product-box'>
     <div class = 'product-text'>
-    <img class = 'product-img' src="" alt="placeholder">
     <h1 class="h1-boxes">Category: Shop</h1>
+    <ul class="product-list">
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
     </div>
     </div>
 </section>
