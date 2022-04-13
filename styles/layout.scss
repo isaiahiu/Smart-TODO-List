@@ -1,6 +1,181 @@
 // See: https://sass-lang.com/
 
-body,
+body {
+  display: flex;
+  justify-content: center;
+  background-color: whitesmoke;
+  background: rgb(20,20,29);
+  background: linear-gradient(180deg, rgba(20,20,29,1) 0%, rgba(22,22,27,1) 13%, rgba(135,146,157,1) 100%);}
 html {
   margin: 0;
+}
+
+.logo {
+  width: auto;
+  height: auto;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+  font-size: 120px;
+  align-content: center;
+  border: 8px solid white;
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+// .signin {
+//   color: white;
+//   display: flex;
+//   justify-content: center;
+//   font-family: 'Roboto Condensed', sans-serif;
+//   font-weight: normal;
+//   width:100%;
+//   text-align: center;
+// }
+
+.form-email {
+  display: flex;
+  justify-content: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: normal;
+  height: 54px;
+  width: auto;
+  text-align: center;
+}
+
+
+.form-password {
+  display: flex;
+  justify-content: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: normal;
+  height: 54px;
+  width: auto;
+  margin-top: 25px;
+}
+
+.email-input {
+  text-align: center;
+  padding: 0 25%;
+  font-size: 16px
+}
+
+.password-input {
+  text-align: center;
+  padding: 0 25%;
+  font-size: 16px
+}
+
+h2 {
+  width: 70%;
+  margin: .7em auto;
+  overflow: hidden;
+  text-align: center;
+  font-weight:300;
+  color: #fff;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+h2:before, h2:after {
+  content: "";
+  display: inline-block;
+  width: 50%;
+  margin: 0 .5em 0 -55%;
+  vertical-align: middle;
+  border-bottom: 1px solid;
+}
+h2:after {
+  margin: 0 -55% 0 .5em;
+}
+
+.btn-sign {
+  display: flex;
+  justify-content: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+  height: 54px;
+  width: auto;
+  margin-top: 25px;
+  font-size: 22px;
+}
+
+.sign-in  {
+     background:  transparent;
+     height:  54px;
+     line-height:  40px;
+     border:  2px solid white;
+     display: inline-block;
+     float: none;
+     text-align:  center;
+     width:  96%;
+     padding:  0px!important;
+     font-size:  22px;
+     color:  white;
+ }
+
+.sign-in:hover  {
+     color:  white;
+     background:  rgba(255, 255, 255, 0.2);
+}
+
+.tasks {
+  margin-top: 5em;
+}
+
+.add-category {
+  display: flex;
+  justify-content: center;
+}
+.add-task-text {
+  display: flex;
+  justify-content: center;
+}
+
+.addcat {
+  display: flex;
+  justify-content: center;
+}
+
+.dd {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+p {
+  color: white;
+}
+
+.h1-boxes {
+  color: white;
+  font-family: 'Roboto Condensed', sans-serif;
+  display: flex;
+  justify-content: center;
+ 
+}
+
+label {
+  color: white;
+}
+
+.category-box {
+  border-radius: 5px;
+  border: 2px solid white; margin: 12px
+}
+
+.movie-list {
+  list-style-type: '🎬 ';
+}
+
+.eat-list {
+  list-style-type: '🍕 ';
+}
+
+.book-list {
+  list-style-type: '📖 ';
+}
+
+.product-list {
+  list-style-type: '🛒 ';
 }
