@@ -14,6 +14,8 @@ const addUser = function (user) {
 };
 
 //User Login
+
+// TODO: MAKE SURE THERE IS A CHECK FOR CREDENTIALS 
 const userLogin = function (email, password) {
   const query = `
     SELECT * FROM users WHERE email = $1 AND password = $2`;

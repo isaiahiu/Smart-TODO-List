@@ -23,6 +23,7 @@ $(() => {
 
     $.post("/home/tasks", object, (result) => {
       console.log("this is the result of ajax post : ", result);
+
     });
     // .then((result) => {
     // console.log("ajax call result ", result);
@@ -30,3 +31,11 @@ $(() => {
   });
   // });
 });
+
+
+function escape(str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+  
+}

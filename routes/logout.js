@@ -3,7 +3,7 @@ const router = express.Router();
 
 router.post("/logout", (req, res) => {
   req.session = null;
-  res.redirect("/login");
+  res.redirect("/entry/login");
 });
 
 module.exports = router;
