@@ -3,7 +3,7 @@ const { addNewTask } = require("../helperfuncs/helpfunctions");
 const router = express.Router();
 
 router.get("/", (req, res) => {
-  loadTasks()
+  // loadTasks()
 
 
   return res.render("index"); //pass in user object here with tasks
