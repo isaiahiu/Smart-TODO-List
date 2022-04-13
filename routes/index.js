@@ -1,13 +1,13 @@
 const express = require("express");
-const { addNewTask } = require("../helperfuncs/helpfunctions");
+const { addNewTask, userTasks } = require("../helperfuncs/helpfunctions");
 const router = express.Router();
 
 router.get("/", (req, res) => {
-
-
-
-  return res.render("index"); //pass in user object here with tasks
+  userTasks(req.session.user_id).then((result) => {
+    return res.json(result);
+  });
 });
+
 router.post("/tasks", (req, res) => {
   console.log("req body is ", req);
   const task = req.body["$taskName"];
@@ -18,7 +18,6 @@ router.post("/tasks", (req, res) => {
     console.log("success~!");
     res.json(result);
   });
-  // res.send("hello");
 });
 
 router.post("/:taskId", (req, res) => {});
