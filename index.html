@@ -1,134 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Home Page</title>
 
-<head>
-  <title>Home Page</title>
-  <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    />
+    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+    <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet"> 
 
-  <link rel="stylesheet" href="/styles/styles.css" type="text/css" />
+    <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+    <script type="text/javascript" src="/scripts/app.js"></script>
+  </head>
+  <body>
+  <!-- Nav Bar -->
+  <!-- <nav class="navbar navbar-default">
+    <div class="nav-container">
+      <div class="navbar-header">
+        <p class="navbar-brand"></p>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <!-- 6 -->
+        <!-- <li id="home"><a href="#"></a>Login</li>
+        <li id="about"><a href="#"></a>Register</li>
+      </ul>
+    </div>
+  </nav> -->
 
-  <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
-  <script type="text/javascript" src="/scripts/app.js"></script>
+  <!-- Sign In and Submit-->
+
   
-</head>
+    <main>
+      <h1 class="logo">TODO</h1>
+      <form action="/entry/login" method="POST" class="form-login">
+        <h2 class="signin">Please Sign In</h2>
+        <div class="form-email">
+          <input
+            type="email"
+            class="email-input"
+            placeholder="Enter your Email"
+            name="email"
+          />
+          <label for="email-input"></label>
+        </div>
+        <div class="form-password">
+          <input
+            type="password"
+            class="password-input"
+            placeholder="Enter your Password"
+            name="password"
+          />
+          <label for="password-input"></label>
+        </div>
 
-<!-- Nav Bar -->
-<nav class="navbar navbar-default">
-  <div class="nav-container">
-    <div class="navbar-header">
-      <p class="navbar-brand"></p>
-    </div>
-    <ul class="nav navbar-nav navbar-right">
-      <!-- 6 -->
-      <li id="home"><a href="#"></a>Login</li>
-      <li id="about"><a href="#"></a>Register</li>
-    </ul>
-  </div>
-</nav>
+        <!-- <div class="remember-me">
+          <label>
+            <input type="checkbox" value="remember-me" /> Remember me
+          </label>
+        </div> -->
+        <div class="btn-sign">
+        <button class="sign-in" type="submit">SUBMIT</button>
+      </div>
+      </form>
 
+      <!-- Add a Task/Category -->
 
+      <div class="tasks">
+        <form action="/home/tasks" , method="POST" class="add-task-form">
+          <div class="add-category">
+            <label class="task-label"></label>
+            <input type="text" name="addTask" class="add-task-text" />
+          </div>
+          <div class="addcat">
+          <button type="submit" class="add-task-button">Add to category</button>
+        </div>
+        <div class="dd">
+          <label for="pet-select">Choose a Category:</label>
+          <select name="category-dd" id="category">
+            <option value="">--Please choose an option--</option>
+            <option value="1">Movie</option>
+            <option value="2">Food</option>
+            <option value="3">Book</option>
+            <option value="4">Product</option>
+          </select>
+        </div>
+        </form>
+        
+      </div>
 
+      <!-- Tasks Sorted by Category-->
 
-<!-- Sign In and Submit-->
+      <!-- For Categories:-->
+      <section class="category-containers">
+        <div class="category-box">
+          <div class="movie-text">
+            <h1 class="h1-boxes">Watch</h1>
+            <ul class="movie-list">
+              <li>Star Wars: The Empire Strikes Back</li>
+              <li>Popstar: Never Stop Never Stopping</li>
 
-<body>
-  <main>
-    <form action="/entry/login" method="POST" class="form-login">
-      <h1>Please sign in</h1>
-    <div class="form-email">
-      <input type="email" class="email-input" placeholder="name@example.com" name="email">
-      <label for="email-input">Email address</label>
-    </div>
-    <div class="form-password">
-      <input type="password" class="password-input" placeholder="Password" name="password">
-      <label for="password-input">Password</label>
-    </div>
+            </ul>
+          </div>
+        </div>
 
-    <div class="remember-me">
-      <label>
-        <input type="checkbox" value="remember-me"> Remember me
-      </label>
-    </div>
-    <button class="sign-in" type="submit">Sign in</button>
-    <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
-  </form>
+        <div class="category-box">
+          <div class="eat-text">
+            <h1 class="h1-boxes">Eat</h1>
+            <ul class="eat-list">
+              <li>Peanut Butter</li>
+              <li>Jam</li>
 
-  <!-- Add a Task/Category -->
+            </ul>
+          </div>
+        </div>
 
-  <div>
-  <form action="/index", method="POST" class="add-task-form">
-    <div class="add-category">
-      <label class = "task-label">Task</label>
-      <input type="text" name="addTask" class="add-task-text" />
-    </div>
-    <button name="button" type="submit" class="add-task-button">Add to category</button>
-    <label for="pet-select">Choose a Category:</label>
+        <div class="category-box">
+          <div class="book-text">
+            <h1 class="h1-boxes">Read</h1>
+            <ul class="book-list">
+              <li>The Life of Apple Pie</li>
+              <li>James and the Small Beach</li>
 
-<select name="category-dd" id="category">
-    <option value="">--Please choose an option--</option>
-    <option value="movie">Movie</option>
-    <option value="food">Food</option>
-    <option value="book">Book</option>
-    <option value="parrot">Product</option>
+            </ul>
+          </div>
+        </div>
 
-</select>
+        <div class="category-box">
+          <div class="product-text">
+            <h1 class="h1-boxes">Shop</h1>
+            <ul class="product-list">
+              <li>Coffee</li>
+              <li>More Coffee</li>
 
-  </form>
-</div>
-
-<!-- Tasks Sorted by Category-->
-
-<!-- For Categories:-->
-<section class ="category-containers">
-  <div style="border:2px solid black;margin:12px" class ='movie-box'>
-    <div class = 'movie-text'>
-    <h1 class="h1-boxes">Category: Watch</h1>
-    <ul class="movie-list">
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-    </div>
-  </div>
-
-  <div style="border:2px solid black;margin:12px" class ='eat-box'>
-    <div class = 'eat-text'>
-    <h1 class="h1-boxes">Category: Eat</h1>
-    <ul class="eat-list">
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-  </div>
-  </div>
-
-  <div style="border:2px solid black;margin:12px" class ='book-box'>
-    <div class = 'book-text'>
-    <h1 class="h1-boxes">Category: Read</h1>
-    <ul class="book-list">
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-  </div>
-  </div>
-
-  <div style="border:2px solid black;margin:12px" class ='product-box'>
-    <div class = 'product-text'>
-    <h1 class="h1-boxes">Category: Shop</h1>
-    <ul class="product-list">
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-    </div>
-    </div>
-</section>
-</main>
-
-</body>
-
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
