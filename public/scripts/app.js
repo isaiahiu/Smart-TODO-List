@@ -5,8 +5,8 @@ $(() => {
   $(".form-login").submit((event) => {
     event.preventDefault();
     $(".form-login").slideUp();
-    $(".add-task-button").show("slow");
-    $("#modalbtn").show("slow"); //
+    $("#modalbtn").show("slow");
+    $("#category-containers").show("slow"); //
 
     let $email = $(".email-input").val();
     let $password = $(".password-input").val();
@@ -39,7 +39,6 @@ $(() => {
 //   visibility: "hidden"
 // });
 $("#category-containers").hide();
-$(".add-task-button").hide();
 $("#modalbtn").hide();
 // escape function to protect against XSS
 
