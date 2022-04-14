@@ -21,9 +21,7 @@ router.post("/tasks", (req, res) => {
       return searchResults(response);
     })
     .then((category_id) => {
-      console.log(`categorizer value is `, category_id);
       addNewTask(id, task, category_id).then((result) => {
-        console.log("addnewtask ", result);
         res.json(result);
       });
     });

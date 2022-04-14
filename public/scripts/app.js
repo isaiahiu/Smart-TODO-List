@@ -3,24 +3,26 @@ $(() => {
   loadTasks();
 
   $(".form-login").submit((event) => {
+    event.preventDefault();
     $(".form-login").slideUp();
     $(".add-task-button").show("slow");
-    $("#modalbtn").show("slow"); // 
-    event.preventDefault();
+    $("#modalbtn").show("slow"); //
+
     let $email = $(".email-input").val();
     let $password = $(".password-input").val();
+
     console.log($email, $password);
-    $.post("/entry/login", { $email, $password }).then(() => {});
+    $.post("/entry/login", { $email, $password }).then(() => {
+      $("#category-containers").show("slow"); //
+    });
   });
 
   $(".add-task-form").submit((event) => {
     event.preventDefault();
-    $("#category-containers").show("slow"); //
+
     let $taskName = $(".add-task-text").val();
-    // let $category = $("#category").val();
-
     let object = { $taskName };
-
+    console.log("taskname is ", $taskName);
     $.post("/home/tasks", object, (result) => {
       $(".movie-list").empty();
       $(".eat-list").empty();
@@ -36,9 +38,9 @@ $(() => {
 //   display: "none",
 //   visibility: "hidden"
 // });
-$('#category-containers').hide();
-$('.add-task-button').hide();
-$('#modalbtn').hide()
+$("#category-containers").hide();
+$(".add-task-button").hide();
+$("#modalbtn").hide();
 // escape function to protect against XSS
 
 function escape(str) {
@@ -52,9 +54,9 @@ function createTaskElement(task) {
   const safeHTML = `${escape(task.name)}`;
   const $category = task.category_id;
   // get user details from object and create html with user data
-  const $taskName = (`
+  const $taskName = `
   <div class="task-inner">
-  <p class="name">${escape(task.name)}</p>
+  <p class="name">${safeHTML}</p>
   <footer>
   <span class="icons">
   <i class="fa-solid fa-square-check"></i>
@@ -62,7 +64,7 @@ function createTaskElement(task) {
   </span>
   </footer>
   </div>
-  `); // TODO: will need rest of HTML here
+  `; // TODO: will need rest of HTML here
   return { $taskName, $category };
 }
 
