@@ -20,22 +20,24 @@
 
   </head>
   <body>
-  <!-- Nav Bar -->
-  <!-- <nav class="navbar navbar-default">
-    <div class="nav-container">
-      <div class="navbar-header">
-        <p class="navbar-brand"></p>
-      </div>
-      <ul class="nav navbar-nav navbar-right">
-        <!-- 6 -->
-        <!-- <li id="home"><a href="#"></a>Login</li>
-        <li id="about"><a href="#"></a>Register</li>
-      </ul>
-    </div>
-  </nav> -->
 
-  <!-- Sign In and Submit-->
-
+  <nav class="navbar navbar-expand-md navbar-dark" style ="color: black; color:black;">
+    <div>
+            <a class="navbar-brand" href="/home">SMART-TO-DO</a>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="height: 50px; color:white">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+            </svg>
+          </div>
+    
+    
+            <form class="form-inline" method="POST" action="/logout">
+              <!-- <div class="mr-sm-2" style="color:var(--white)">Logged in As: <%=user.email%></div> -->
+              <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
+                Logout
+              </button>
+            </form>
+    
+            </nav>
   
     <main>
       <h1 class="logo">TODO</h1>
@@ -91,7 +93,8 @@
         </button>
       </div>
       <div class="modal-body">
-        <input type="text" size="50" class="modal-input" placeholder="Enter your task e.g. Watch Pineapple Express">
+        <form action="/home/tasks" , method="POST" class="add-task-form">
+        <input type="text" size="50" class=".add-task-text" placeholder="Enter your task e.g. Watch Pineapple Express">
       </input>
       </div>
       <div class="modal-footer">
@@ -99,10 +102,10 @@
         <button type="submit" class="btn btn-primary">Add task</button>
       </div>
     </div>
+  </form>
   </div>
 </div>
 
-        <form action="/home/tasks" , method="POST" class="add-task-form">
         <div class="addcat">
           <button class="add-task-button" type="submit">ADD A TASK</button>
         </div>
@@ -116,7 +119,6 @@
             <option value="4">Product</option>
           </select>
         </div>
-        </form>
         
       </div>
 
@@ -127,7 +129,7 @@
         <div class="category-box">
           <div class="movie-text">
                 <h2 class="container-h2">Watch</h2>
-                <div class="task-inner"
+                <div class="task-inner movie-list">
                 <p class="name">Watch One Piece</p>
               <footer>
               <span class="icons">
@@ -136,6 +138,7 @@
               </span>
               </footer>
               </div>
+            </div>
               </div>
           </div>
         </div>
@@ -143,7 +146,8 @@
         <div class="category-box">
           <div class="eat-text">
               <h2 class="container-h2">Read</h2>
-              <div class="task-inner"
+              <div class="task-inner">
+                
               <p class="name">Read The Athletic</p>
             <footer>
             <span class="icons">
