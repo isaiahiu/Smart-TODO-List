@@ -14,6 +14,7 @@ router.get("/", (req, res) => {
 });
 
 router.post("/tasks", (req, res) => {
+  console.log("req is : ", req);
   const task = req.body["$taskName"];
   const id = req.session.user_id;
   catergorizer(task)

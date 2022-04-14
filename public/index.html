@@ -3,7 +3,7 @@
   <head>
     <title>Todo</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
+
 
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
     <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/a625a71c57.js" crossorigin="anonymous"></script>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
@@ -36,7 +36,7 @@
 
   <!-- Sign In and Submit-->
 
-  
+
     <main>
       <h1 class="logo">TODO</h1>
       <form action="/entry/login" method="POST" class="form-login">
@@ -71,7 +71,7 @@
       </form>
 
 
-     
+
 <!-- Add a Task/Category -->
       <div id="tasks">
 <!-- Model 1 end>-->
@@ -91,18 +91,19 @@
         </button>
       </div>
       <div class="modal-body">
-        <input type="text" size="50" class="modal-input" placeholder="Enter your task e.g. Watch Pineapple Express">
-      </input>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Add task</button>
-      </div>
+        <form action="/home/tasks" , method="POST" class="add-task-form">
+          <input type="text" size="50" class="modal-input add-task-text" placeholder="Enter your task e.g. Watch Pineapple Express">
+        </input>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Add task</button>
+        </div>
+      </form>
+    </div>
     </div>
   </div>
 </div>
 
-        <form action="/home/tasks" , method="POST" class="add-task-form">
         <div class="addcat">
           <button class="add-task-button" type="submit">ADD A TASK</button>
         </div>
@@ -116,8 +117,7 @@
             <option value="4">Product</option>
           </select>
         </div>
-        </form>
-        
+
       </div>
 
       <!-- Tasks Sorted by Category-->
@@ -127,7 +127,7 @@
         <div class="category-box">
           <div class="movie-text">
                 <h2 class="container-h2">Watch</h2>
-                <div class="task-inner"
+                <div class="movie-list task-inner">
                 <p class="name">Watch One Piece</p>
               <footer>
               <span class="icons">
@@ -138,12 +138,12 @@
               </div>
               </div>
           </div>
-        </div>
+        <!-- </div> -->
 
         <div class="category-box">
           <div class="eat-text">
               <h2 class="container-h2">Read</h2>
-              <div class="task-inner"
+              <div class="book-list task-inner">
               <p class="name">Read The Athletic</p>
             <footer>
             <span class="icons">
@@ -154,12 +154,12 @@
             </div>
             </div>
         </div>
-      </div>
+      <!-- </div> -->
 
         <div class="category-box">
           <div class="book-text">
             <h2 class="container-h2">Eat</h2>
-            <div class="task-inner"
+            <div class="eat-list task-inner">
             <p class="name">Coffee</p>
           <footer>
           <span class="icons">
@@ -170,12 +170,12 @@
           </div>
           </div>
       </div>
-    </div>
+    <!-- </div> -->
 
         <div class="category-box">
           <div class="product-text">
             <h2 class="container-h2">Buy</h2>
-            <div class="task-inner"
+            <div class="product-list task-inner">
             <p class="name">Buy some new socks</p>
           <footer>
           <span class="icons">
@@ -185,7 +185,7 @@
           </footer>
           </div>
           </div>
-      </div>
+      <!-- </div> -->
     </div>
       </section>
     </main>
@@ -193,7 +193,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
     <script type="text/javascript" src="/scripts/app.js"></script>
-    
+
 
   </body>
 
