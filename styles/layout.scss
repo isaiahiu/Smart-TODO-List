@@ -3,7 +3,6 @@
 body {
   display: flex;
   justify-content: center;
-  background-color: whitesmoke;
   background: rgb(20,20,29);
   background: linear-gradient(180deg, rgba(20,20,29,1) 0%, rgba(22,22,27,1) 13%, rgba(135,146,157,1) 100%);}
 html {
@@ -23,16 +22,6 @@ html {
   justify-content: center;
   margin-bottom: 15px;
 }
-
-// .signin {
-//   color: white;
-//   display: flex;
-//   justify-content: center;
-//   font-family: 'Roboto Condensed', sans-serif;
-//   font-weight: normal;
-//   width:100%;
-//   text-align: center;
-// }
 
 .form-email {
   display: flex;
@@ -135,12 +124,15 @@ h2:after {
 .addcat {
   display: flex;
   justify-content: center;
+  margin-top: 30px;
 }
 
 .dd {
   display: flex;
   justify-content: center;
   margin-top: 1.5rem;
+  width: auto;
+  visibility: hidden
 }
 
 p {
@@ -161,21 +153,101 @@ label {
 
 .category-box {
   border-radius: 5px;
-  border: 2px solid white; margin: 12px
+  border: 2px solid white; margin: 12px;
+  color: white; 
 }
 
-.movie-list {
-  list-style-type: '🎬 ';
+.category-box:hover {
+  box-shadow: 5px 5px 2px grey;
 }
 
-.eat-list {
-  list-style-type: '🍕 ';
+#category-containers {
+  border: none;
 }
 
-.book-list {
-  list-style-type: '📖 ';
+.container-h2 {
+  margin-top: 5px;
 }
 
-.product-list {
-  list-style-type: '🛒 ';
+.fa-square-check:hover {
+  color: #ebde4c
+}
+
+.fa-trash-can:hover {
+  color: #ebde4c
+}
+
+.name {
+  margin-left: 15px;
+}
+
+.task-inner {
+  margin-left: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.icons {
+  margin-right: 15px;
+
+}
+
+.add-task-button  {
+  background:  transparent;
+  height:  54px;
+  line-height:  40px;
+  border:  2px solid white;
+  display: inline-block;
+  float: none;
+  text-align:  center;
+  width:  96%;
+  padding:  0px!important;
+  font-size:  22px;
+  color:  white;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+}
+
+.add-task-button:hover  {
+  color:  white;
+  background:  rgba(255, 255, 255, 0.2);
+}
+
+#modalbtn {
+  background:  transparent;
+  height:  54px;
+  line-height:  40px;
+  border:  2px solid white;
+  display: inline-block;
+  float: none;
+  text-align:  center;
+  width:  96%;
+  padding:  0px!important;
+  font-size:  22px;
+  color:  white;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+  border-radius: 0;
+  margin-left: 8px;
+}
+
+#modalbtn:hover  {
+  border-color: white;
+  color:  white;
+  background:  rgba(255, 255, 255, 0.2);
+  
+}
+
+#exampleModalLabel {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+
+}
+
+.modal-input:focus {
+  border-color: rgba(30, 33, 29, 0.8);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(126, 239, 104, 0.6);
+  outline: 0 none;
 }

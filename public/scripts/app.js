@@ -3,16 +3,19 @@ $(() => {
   loadTasks();
 
   $(".form-login").submit((event) => {
+    $(".form-login").slideUp();
+    $(".add-task-button").show("slow");
+    $("#modalbtn").show("slow"); // 
     event.preventDefault();
     let $email = $(".email-input").val();
     let $password = $(".password-input").val();
     console.log($email, $password);
-
     $.post("/entry/login", { $email, $password }).then(() => {});
   });
 
   $(".add-task-form").submit((event) => {
     event.preventDefault();
+    $("#category-containers").show("slow"); //
     let $taskName = $(".add-task-text").val();
     let $category = $("#category").val();
 
@@ -28,6 +31,14 @@ $(() => {
   });
 });
 
+//  Hide
+// $('#tasks').css({
+//   display: "none",
+//   visibility: "hidden"
+// });
+$('#category-containers').hide();
+$('.add-task-button').hide();
+$('#modalbtn').hide()
 // escape function to protect against XSS
 
 function escape(str) {
@@ -41,8 +52,17 @@ function createTaskElement(task) {
   const safeHTML = `${escape(task.name)}`;
   const $category = task.category_id;
   // get user details from object and create html with user data
-  const $taskName = `
-   <li>${safeHTML}</li>`; // TODO: will need rest of HTML here
+  const $taskName = (`
+  <div class="task-inner">
+  <p class="name">${escape(task.name)}</p>
+  <footer>
+  <span class="icons">
+  <i class="fa-solid fa-square-check"></i>
+  <i class="fa-solid fa-trash-can"></i>
+  </span>
+  </footer>
+  </div>
+  `); // TODO: will need rest of HTML here
   return { $taskName, $category };
 }
 
