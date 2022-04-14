@@ -4,9 +4,9 @@ INSERT INTO users (username, email, password) VALUES ('DogLover', 'doglover@gmai
 INSERT INTO users (username, email, password) VALUES ('FoodLover', 'foodlover@gmail.com', 'password');
 INSERT INTO users (username, email, password) VALUES ('LoveLover', 'lovelover@gmail.com', 'password');
 
-INSERT INTO categories (name) VALUES ('Read');
-INSERT INTO categories (name) VALUES ('Eat');
 INSERT INTO categories (name) VALUES ('Watch');
+INSERT INTO categories (name) VALUES ('Eat');
+INSERT INTO categories (name) VALUES ('Read');
 INSERT INTO categories (name) VALUES ('Buy');
 
 INSERT INTO tasks (
@@ -17,7 +17,7 @@ INSERT INTO tasks (
   priority,
   description
 )
-VALUES (1,1,'Read Harry Potter', FALSE, 0, 'description');
+VALUES (1,3,'Read Harry Potter', FALSE, 0, 'description');
 
 INSERT INTO tasks (
   user_id,
@@ -29,7 +29,7 @@ INSERT INTO tasks (
   start_date,
   end_date
   )
-VALUES (1,3,'Watch Family Guy', FALSE, 0, 'description', '2022-04-09', '2022-05-09');
+VALUES (1,1,'Watch Family Guy', FALSE, 0, 'description', '2022-04-09', '2022-05-09');
 
 INSERT INTO tasks (
   user_id,
