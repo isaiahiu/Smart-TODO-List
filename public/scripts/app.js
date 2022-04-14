@@ -17,9 +17,9 @@ $(() => {
     event.preventDefault();
     $("#category-containers").show("slow"); //
     let $taskName = $(".add-task-text").val();
-    let $category = $("#category").val();
+    // let $category = $("#category").val();
 
-    let object = { $taskName, $category };
+    let object = { $taskName };
 
     $.post("/home/tasks", object, (result) => {
       $(".movie-list").empty();

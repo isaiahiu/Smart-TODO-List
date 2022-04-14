@@ -1,5 +1,10 @@
 const express = require("express");
-const { addNewTask, userTasks } = require("../helperfuncs/helpfunctions");
+const {
+  addNewTask,
+  userTasks,
+  catergorizer,
+  searchResults,
+} = require("../helperfuncs/helpfunctions");
 const router = express.Router();
 
 router.get("/", (req, res) => {
@@ -9,15 +14,19 @@ router.get("/", (req, res) => {
 });
 
 router.post("/tasks", (req, res) => {
-  console.log("req body is ", req);
   const task = req.body["$taskName"];
-  const category = req.body["$category"];
   const id = req.session.user_id;
-  console.log("cookie is : ", req.session.user_id);
-  addNewTask(id, task, category).then((result) => {
-    console.log("success~!");
-    res.json(result);
-  });
+  catergorizer(task)
+    .then((response) => {
+      return searchResults(response);
+    })
+    .then((category_id) => {
+      console.log(`categorizer value is `, category_id);
+      addNewTask(id, task, category_id).then((result) => {
+        console.log("addnewtask ", result);
+        res.json(result);
+      });
+    });
 });
 
 router.post("/:taskId", (req, res) => {});
