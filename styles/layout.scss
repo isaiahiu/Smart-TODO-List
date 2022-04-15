@@ -2,7 +2,6 @@
 
 html {
   margin: 0;
-
 }
 body {
   display: flex;
@@ -14,52 +13,50 @@ body {
   align-items: center;
   height: auto;
   padding-top: 5%;
-
 }
 
-  nav {
-    display: flex;
-    width: 100%;
-    height: 5.6rem;
-    justify-content: space-between !important;
-    align-items: center;
-  }
+nav {
+  display: flex;
+  width: 100%;
+  height: 5.6rem;
+  justify-content: space-between !important;
+  align-items: center;
+}
 
-  .navbar {
-    position: fixed;
-    top: 0;
-  }
-  .navbar-brand {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight:700;
-    font-size: 25px;
-    border: 3px solid white;
-    padding: 0 15px;
-    margin: 16px 16px 16px 0;
-    width: auto;
-  }
-  .btn-outline-light {
-    margin-right: 35px;
-    margin-top: 20px;
-    font-family: 'Roboto Condensed', sans-serif;
-    border-radius: 0;
-    font-weight:700;
-    font-size: 25px;
-    border: 3px solid white;
-    padding: 0 20px;
-  }
+.navbar {
+  position: fixed;
+  top: 0;
+}
+.navbar-brand {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  border: 3px solid white;
+  padding: 0 15px;
+  margin: 16px 16px 16px 0;
+  width: auto;
+}
+.btn-outline-light {
+  margin-right: 35px;
+  margin-top: 20px;
+  font-family: "Roboto Condensed", sans-serif;
+  border-radius: 0;
+  font-weight: 700;
+  font-size: 25px;
+  border: 3px solid white;
+  padding: 0 20px;
+}
 
-  .btn-outline-light:hover {
-    border-color: white;
-    color:  white;
-    background:  rgba(255, 255, 255, 0.2);
-  }
-
+.btn-outline-light:hover {
+  border-color: white;
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+}
 
 .logo {
   width: auto;
   height: auto;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: bold;
   font-size: 120px;
   align-content: center;
@@ -74,18 +71,17 @@ body {
 .form-email {
   display: flex;
   justify-content: center;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: normal;
   height: 54px;
   width: auto;
   text-align: center;
 }
 
-
 .form-password {
   display: flex;
   justify-content: center;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: normal;
   height: 54px;
   width: auto;
@@ -95,41 +91,42 @@ body {
 .email-input {
   text-align: center;
   padding: 0 25%;
-  font-size: 16px
+  font-size: 16px;
 }
 
 .password-input {
   text-align: center;
   padding: 0 25%;
-  font-size: 16px
+  font-size: 16px;
 }
 
 h2 {
   width: 70%;
-  margin: .7em auto;
+  margin: 0.7em auto;
   overflow: hidden;
   text-align: center;
-  font-weight:300;
+  font-weight: 300;
   color: #fff;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
-h2:before, h2:after {
+h2:before,
+h2:after {
   content: "";
   display: inline-block;
   width: 50%;
-  margin: 0 .5em 0 -55%;
+  margin: 0 0.5em 0 -55%;
   vertical-align: middle;
   border-bottom: 1px solid;
 }
 h2:after {
-  margin: 0 -55% 0 .5em;
+  margin: 0 -55% 0 0.5em;
 }
 
 .btn-sign {
   display: flex;
   justify-content: center;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: bold;
   height: 54px;
   width: auto;
@@ -137,23 +134,23 @@ h2:after {
   font-size: 22px;
 }
 
-.sign-in  {
-     background:  transparent;
-     height:  54px;
-     line-height:  40px;
-     border:  2px solid white;
-     display: inline-block;
-     float: none;
-     text-align:  center;
-     width:  96%;
-     padding:  0px!important;
-     font-size:  22px;
-     color:  white;
- }
+.sign-in {
+  background: transparent;
+  height: 54px;
+  line-height: 40px;
+  border: 2px solid white;
+  display: inline-block;
+  float: none;
+  text-align: center;
+  width: 96%;
+  padding: 0px !important;
+  font-size: 22px;
+  color: white;
+}
 
-.sign-in:hover  {
-     color:  white;
-     background:  rgba(255, 255, 255, 0.2);
+.sign-in:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .tasks {
@@ -180,7 +177,7 @@ h2:after {
   justify-content: center;
   margin-top: 1.5rem;
   width: auto;
-  visibility: hidden
+  visibility: hidden;
 }
 
 p {
@@ -189,10 +186,9 @@ p {
 
 .h1-boxes {
   color: white;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   display: flex;
   justify-content: center;
- 
 }
 
 label {
@@ -201,8 +197,9 @@ label {
 
 .category-box {
   border-radius: 5px;
-  border: 2px solid white; margin: 12px;
-  color: white; 
+  border: 2px solid white;
+  margin: 12px;
+  color: white;
 }
 
 .category-box:hover {
@@ -215,16 +212,16 @@ label {
 
 .container-h2 {
   margin-top: 5px;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: 700;
 }
 
 .fa-square-check:hover {
-  color: #ebde4c
+  color: #ebde4c;
 }
 
 .fa-trash-can:hover {
-  color: #ebde4c
+  color: #ebde4c;
 }
 
 .name {
@@ -240,40 +237,39 @@ label {
 
 .icons {
   margin-right: 15px;
-
 }
 
-.add-task-button  {
-  background:  transparent;
-  height:  54px;
-  line-height:  40px;
-  border:  2px solid white;
+.add-task-button {
+  background: transparent;
+  height: 54px;
+  line-height: 40px;
+  border: 2px solid white;
   display: inline-block;
   float: none;
-  text-align:  center;
-  width:  96%;
-  padding:  0px!important;
-  font-size:  22px;
-  color:  white;
-  font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
+  width: 96%;
+  padding: 0px !important;
+  font-size: 22px;
+  color: white;
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: bold;
 }
 
-.add-task-button:hover  {
-  color:  white;
-  background:  rgba(255, 255, 255, 0.2);
+.add-task-button:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
 }
 
 #modalbtn {
-  background:  transparent;
-  line-height:  40px;
-  border:  2px solid white;
+  background: transparent;
+  line-height: 40px;
+  border: 2px solid white;
   display: inline-block;
-  text-align:  center;
-  padding:  0px!important;
-  font-size:  22px;
-  color:  white;
-  font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
+  padding: 0px !important;
+  font-size: 22px;
+  color: white;
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: bold;
   border-radius: 100%;
   position: fixed;
@@ -285,18 +281,16 @@ label {
   height: 100px;
 }
 
-#modalbtn:hover  {
+#modalbtn:hover {
   border-color: white;
-  color:  white;
-  background:  rgba(255, 255, 255, 0.2);
-  
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
 }
 
 #exampleModalLabel {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-size: 30px;
   font-weight: bold;
-
 }
 
 .modal-input:focus {
@@ -320,21 +314,27 @@ label {
 }
 
 .modal-span {
-  color:white;
+  color: white;
 }
 
 #exampleModalLabel {
   color: white;
 }
 
-.btn-primary, .btn-secondary  {
+.btn-primary,
+.btn-secondary {
   background-color: steelblue;
   border-color: antiquewhite;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: 700;
 }
 
-.btn-primary:hover, .btn-secondary:hover {
+.btn-primary:hover,
+.btn-secondary:hover {
   background-color: #001222;
   border-color: antiquewhite;
+}
+
+.modal-footer {
+  border-top: none;
 }
