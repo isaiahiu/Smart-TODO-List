@@ -13,7 +13,7 @@ $(() => {
       $(".movie-list").empty();
       $(".eat-list").empty();
       $(".book-list").empty();
-      $(".product.list").empty();
+      $(".product-list").empty();
       loadTasks();
     });
   });
@@ -27,7 +27,7 @@ $(() => {
       $(".movie-list").empty();
       $(".eat-list").empty();
       $(".book-list").empty();
-      $(".product.list").empty();
+      $(".product-list").empty();
       loadTasks();
     });
   });
