@@ -1,19 +1,20 @@
 // Client facing scripts here
 $(() => {
-  loadTasks();
-
   $(".form-login").submit((event) => {
     event.preventDefault();
     $(".form-login").slideUp();
     $("#modalbtn").show("slow");
-    $("#category-containers").show("slow"); //
     $(".btn-outline-light").show("slow");
     let $email = $(".email-input").val();
     let $password = $(".password-input").val();
 
-    console.log($email, $password);
     $.post("/entry/login", { $email, $password }).then(() => {
-      $("#category-containers").show("slow"); //
+      $("#category-containers").show("slow");
+      $(".movie-list").empty();
+      $(".eat-list").empty();
+      $(".book-list").empty();
+      $(".product.list").empty();
+      loadTasks();
     });
   });
 
@@ -22,7 +23,6 @@ $(() => {
 
     let $taskName = $(".add-task-text").val();
     let object = { $taskName };
-    console.log("taskname is ", $taskName);
     $.post("/home/tasks", object, (result) => {
       $(".movie-list").empty();
       $(".eat-list").empty();
@@ -64,7 +64,7 @@ function createTaskElement(task) {
   </span>
   </footer>
   </div>
-  `; // TODO: will need rest of HTML here
+  `;
   return { $taskName, $category };
 }
 
