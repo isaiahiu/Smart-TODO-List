@@ -7,8 +7,7 @@ html {
 body {
   display: flex;
   justify-content: center;
-  background: rgb(20,20,29);
-  background: linear-gradient(180deg, rgba(20,20,29,1) 0%, rgba(22,22,27,1) 13%, rgba(135,146,157,1) 100%);
+  background: #14141d;
   flex-direction: column;
   align-items: center;
   flex-direction: column;
@@ -305,4 +304,9 @@ nav {
   height: 5.6rem;
   justify-content: space-between !important;
 
+}
+
+.all-containers {
+  display: flex;
+  flex-direction: column;
 }

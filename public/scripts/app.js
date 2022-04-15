@@ -7,7 +7,7 @@ $(() => {
     $(".form-login").slideUp();
     $("#modalbtn").show("slow");
     $("#category-containers").show("slow"); //
-
+    $(".btn-outline-light").show("slow");
     let $email = $(".email-input").val();
     let $password = $(".password-input").val();
 
@@ -40,6 +40,7 @@ $(() => {
 // });
 $("#category-containers").hide();
 $("#modalbtn").hide();
+$(".btn-outline-light").hide();
 // escape function to protect against XSS
 
 function escape(str) {
